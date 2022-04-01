@@ -28,11 +28,11 @@ function Sidebar(){
                  <li>
                    <NavLink to="/" activeClassName="menu_active"> <span> <img src={icon1} alt="icon1"/> </span> Dashboard </NavLink>
                    <NavLink to="/booking" activeClassName="menu_active"> <span> <img src={icon2} alt="icon1"/> </span> New Bookings </NavLink>
-                   <NavLink to="/booking" activeClassName="menu_active"> <span> <img src={icon3} alt="icon1"/> </span> Analytics </NavLink>
-                   <NavLink to="/booking" activeClassName="menu_active"> <span> <img src={icon4} alt="icon1"/> </span> Tests </NavLink>
+                   <NavLink to="/analytics" activeClassName="menu_active"> <span> <img src={icon3} alt="icon1"/> </span> Analytics </NavLink>
+                   <NavLink to="/tests" activeClassName="menu_active"> <span> <img src={icon4} alt="icon1"/> </span> Tests </NavLink>
                    <NavLink to="/payement" activeClassName="menu_active"> <span> <img src={icon5} alt="icon1"/> </span> Payment </NavLink>
-                   <NavLink to="/booking" activeClassName="menu_active"> <span> <img src={icon6} alt="icon1"/> </span> Settings </NavLink>
-                   <NavLink to="/booking" activeClassName="menu_active"> <span> <img src={icon7} alt="icon1"/> </span> Support </NavLink>
+                   <NavLink to="/settings" activeClassName="menu_active"> <span> <img src={icon6} alt="icon1"/> </span> Settings </NavLink>
+                   <NavLink to="/support" activeClassName="menu_active"> <span> <img src={icon7} alt="icon1"/> </span> Support </NavLink>
                  </li>
                </ul>
             </div>

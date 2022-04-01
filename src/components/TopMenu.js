@@ -51,28 +51,28 @@ function TopMenu(){
                                 </a>
                                 <ul className="dropdown-menu account-div shadow" aria-labelledby="navbarDropdown">
                                     <li>
-                                      <NavLink to="/booking" className="dropdown-item">
+                                      <a className="dropdown-item">
                                           Login id
                                           <span className="d-block"> john489@gmail.com </span>
-                                      </NavLink>
+                                      </a>
                                     </li>
                                     <li>
-                                        <NavLink to="/booking" className="dropdown-item">
+                                        <a className="dropdown-item">
                                            Phone Number
                                             <span className="d-block"> 0000000000 </span>
-                                        </NavLink>
+                                        </a>
                                     </li>
                                     <li>
-                                        <NavLink to="/booking" className="dropdown-item">
+                                        <a className="dropdown-item">
                                            Branch Name
                                             <span className="d-block"> ABC Branch </span>
-                                        </NavLink>
+                                        </a>
                                     </li>
                                     <li>
-                                        <NavLink to="/booking" className="dropdown-item">
+                                        <a className="dropdown-item">
                                         Logout
                                             
-                                        </NavLink>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>

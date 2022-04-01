@@ -2,7 +2,7 @@ import React from "react";
 import $ from "jquery";
 
 
-class AvilableSlot extends React.Component {
+class AvSlottwo extends React.Component {
     componentWillMount(){
 
         $(document).ready(function(){
@@ -24,14 +24,14 @@ class AvilableSlot extends React.Component {
 
                 <ul className="list-unstyled ">
                     <li>
-                    <a className="time-sl" >
+                    <p className="time-sl avilable-slt disabled" tabindex="-1" aria-disabled="true">
                         06:00 - 07:00 AM
-                    </a>
+                    </p>
                     </li>
                     <li>
-                    <p className="time-sl avilable-slt" disabled>
+                    <a className="time-sl ">
                         07:00 - 08:00 AM
-                    </p>
+                    </a>
                     </li>
                     <li>
                     <a className="time-sl">
@@ -56,7 +56,7 @@ class AvilableSlot extends React.Component {
                     </a>
                     </li>
                     <li>
-                    <p className="time-sl avilable-slt" disabled>
+                    <p className="time-sl avilable-slt disabled" aria-disabled="true">
                         12:00 - 01:00 PM
                     </p>
                     </li>
@@ -73,7 +73,7 @@ class AvilableSlot extends React.Component {
                     </li>
 
                     <li>
-                    <p className="time-sl avilable-slt" disabled>
+                    <p className="time-sl avilable-slt">
                         03:00 - 04:00 PM
                     </p>
                     </li>
@@ -114,4 +114,4 @@ class AvilableSlot extends React.Component {
     }
   }
 
-export default AvilableSlot;
+export default AvSlottwo;

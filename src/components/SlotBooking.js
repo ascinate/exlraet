@@ -1,6 +1,7 @@
 import React from "react";
 import { BsCheck2, BsCheckLg } from "react-icons/bs";
 import AvilableSlot from "./AvilableSlot";
+import AvSlottwo from "./AvSlottwo";
 import $ from "jquery";
 
 class SlotBooking extends React.Component {
@@ -15,7 +16,7 @@ class SlotBooking extends React.Component {
         
            });
 
-           $("#on1").click(function(){
+           $("#day1").click(function(){
             $("#sun-sl").show();
             $("#mon-sl").hide();
             $("#tu-sl").hide();
@@ -24,7 +25,76 @@ class SlotBooking extends React.Component {
             $("#fri-sl").hide();
             $("#sta-sl").hide();
             });
+
+            $("#day2").click(function(){
+                $("#sun-sl").hide();
+                $("#mon-sl").show();
+                $("#tu-sl").hide();
+                $("#wn-sl").hide();
+                $("#th-sl").hide();
+                $("#fri-sl").hide();
+                $("#sta-sl").hide();
+                });
+            
+            $("#day3").click(function(){
+                $("#sun-sl").hide();
+                $("#mon-sl").hide();
+                $("#tu-sl").show();
+                $("#wn-sl").hide();
+                $("#th-sl").hide();
+                $("#fri-sl").hide();
+                $("#sta-sl").hide();
+                });
+
+            $("#day4").click(function(){
+                $("#sun-sl").hide();
+                $("#mon-sl").hide();
+                $("#tu-sl").hide();
+                $("#wn-sl").show();
+                $("#th-sl").hide();
+                $("#fri-sl").hide();
+                $("#sta-sl").hide();
+                });
+            
+            $("#day5").click(function(){
+                $("#sun-sl").hide();
+                $("#mon-sl").hide();
+                $("#tu-sl").hide();
+                $("#wn-sl").hide();
+                $("#th-sl").show();
+                $("#fri-sl").hide();
+                $("#sta-sl").hide();
+                });
+            
+            $("#day6").click(function(){
+                $("#sun-sl").hide();
+                $("#mon-sl").hide();
+                $("#tu-sl").hide();
+                $("#wn-sl").hide();
+                $("#th-sl").hide();
+                $("#fri-sl").show();
+                $("#sta-sl").hide();
+                });
+
+
+            $("#day7").click(function(){
+                $("#sun-sl").hide();
+                $("#mon-sl").hide();
+                $("#tu-sl").hide();
+                $("#wn-sl").hide();
+                $("#th-sl").hide();
+                $("#fri-sl").hide();
+                $("#sta-sl").show();
+                });
+
+            $('.plans li a').click(function(){
+                $('li a').removeClass("active");
+                $(this).addClass("active");
+            });
         });
+
+
+
         
       }
     render() {
@@ -32,155 +102,117 @@ class SlotBooking extends React.Component {
           <>
            <div className="row plans">
 							       
-								   
-                <div className="col">
-
-                    <label className="plan basic-plan" for="on1">
-                        <input  type="radio" name="plan" id="on1" />
-                        <div className="plan-content">
+				<ul className="d-flex list-unstyled justify-content-between">
+                  <li>
+                     <a id="day1" className="cm-slots">
                         <span className="iconradio">
                             <BsCheckLg/>
                         </span>
+
                         <div className="plan-details">
                             <span className="d-block ts-cm">  Sunday </span>
                         </div>
-                        </div>
-                    </label>
-                     
-                </div>
+                     </a>
+                  </li>
 
-
-                <div className="col">
-
-                    <label className="plan basic-plan" for="on2">
-                        <input type="radio" name="plan" id="on2" checked />
-                        <div className="plan-content">
+                  <li>
+                     <a id="day2" className="cm-slots active">
                         <span className="iconradio">
                             <BsCheckLg/>
                         </span>
+
                         <div className="plan-details">
                             <span className="d-block ts-cm">  Monday </span>
                         </div>
-                        </div>
-                    </label>
-                     
-                </div>
+                     </a>
+                  </li>
 
-
-                <div className="col">
-
-                    <label className="plan basic-plan" for="on3">
-                        <input type="radio" name="plan" id="on3" />
-                        <div className="plan-content">
+                  <li>
+                     <a id="day3" className="cm-slots">
                         <span className="iconradio">
                             <BsCheckLg/>
                         </span>
+
                         <div className="plan-details">
                             <span className="d-block ts-cm">  Tuesday </span>
                         </div>
-                        </div>
-                    </label>
-                     
-                </div>
-
-
-                <div className="col">
-
-                    <label className="plan basic-plan" for="on4">
-                        <input type="radio" name="plan" id="on4" />
-                        <div className="plan-content">
+                     </a>
+                  </li>
+                  <li>
+                     <a id="day4" className="cm-slots">
                         <span className="iconradio">
                             <BsCheckLg/>
                         </span>
+
                         <div className="plan-details">
                             <span className="d-block ts-cm">  Wednesday </span>
                         </div>
-                        </div>
-                    </label>
-                     
-                </div>
-
-
-                <div className="col">
-
-                    <label className="plan basic-plan" for="on5">
-                        <input type="radio" name="plan" id="on5" />
-                        <div className="plan-content">
+                     </a>
+                  </li>
+                  <li>
+                     <a id="day5" className="cm-slots">
                         <span className="iconradio">
                             <BsCheckLg/>
                         </span>
+
                         <div className="plan-details">
                             <span className="d-block ts-cm">  Thursday </span>
                         </div>
-                        </div>
-                    </label>
-                     
-                </div>
+                     </a>
+                  </li>
 
-
-                <div className="col">
-
-                    <label className="plan basic-plan" for="on6">
-                        <input type="radio" name="plan" id="on6" />
-                        <div className="plan-content">
+                  <li>
+                     <a id="day6" className="cm-slots">
                         <span className="iconradio">
                             <BsCheckLg/>
                         </span>
+
                         <div className="plan-details">
                             <span className="d-block ts-cm">  Friday </span>
                         </div>
-                        </div>
-                    </label>
-                     
-                </div>
-
-
-                <div className="col">
-
-                    <label className="plan basic-plan" for="on7">
-                        <input type="radio" name="plan" id="on7" />
-                        <div className="plan-content">
+                     </a>
+                  </li>
+                  <li>
+                     <a id="day7" className="cm-slots">
                         <span className="iconradio">
                             <BsCheckLg/>
                         </span>
+
                         <div className="plan-details">
                             <span className="d-block ts-cm">  Saturday </span>
                         </div>
-                        </div>
-                    </label>
-                     
-                </div>
-
-                
-
+                     </a>
+                  </li>
+                </ul>				   
+               
            </div>
 
            <div className="inside-slte">
               <div id="sun-sl">
-                 <AvilableSlot/>
+                 <AvSlottwo/>
               </div>
               <div id="mon-sl">
                  <AvilableSlot/>
               </div>
 
               <div id="tu-sl">
-                 <AvilableSlot/>
+                <AvSlottwo/>
               </div>
 
               <div id="wn-sl">
-                 <AvilableSlot/>
+              <AvilableSlot/>
               </div>
 
               <div id="th-sl">
-                 <AvilableSlot/>
+                 <AvSlottwo/>
               </div>
 
               <div id="fri-sl">
-                 <AvilableSlot/>
+                <AvilableSlot/>
               </div>
 
               <div id="sta-sl">
-                 <AvilableSlot/>
+                <AvSlottwo/>
               </div>
                
            </div>
