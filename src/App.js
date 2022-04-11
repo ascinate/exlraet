@@ -3,6 +3,8 @@ import './App.css';
 import logo from "../src/images/logo.svg";
 import userimg from "../src/images/user-pic.png";
 import {NavLink } from "react-router-dom";
+import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 import Sidebar from "./Sildebar";
@@ -27,6 +29,9 @@ import Register from "./Register";
 import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
 import { BsFilterLeft, BsSearch, BsBell } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
+import AdminLogin from "./AdminLogin";
+import AdminDashbord from "./AdminDashbord";
+
 import $ from "jquery";
 
 class App extends React.Component {
@@ -47,8 +52,8 @@ class App extends React.Component {
                   <Route exact="true" path="/tests" element={<Tests/>}/>
                   <Route exact="true" path="/settings" element={<Settings/>}/>
                   <Route exact="true" path="/support" element={<Support/>}/>
-                  
-                  
+                  <Route exact="true" path="/adminlogin" element={<AdminLogin/>}/>
+                  <Route exact="true" path="/admindashbord" element={<AdminDashbord/>}/>
                   
                 
               </Routes>

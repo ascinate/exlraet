@@ -142,7 +142,7 @@ class Tests extends React.Component {
                                 </div>
                                 <div className="col">
                                 <div className="from-group mb-4 mb-lg-0">
-                                    <label> Test Sample </label>
+                                    <label> Test Name </label>
                                     <input type="text" className="form-control"/>
                                 </div>
                                 

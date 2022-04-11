@@ -2,13 +2,13 @@ import React, { PureComponent } from "react";
 import { PieChart, Pie, Sector, Cell, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'Competed Customers', value: 400 },
-  { name: 'Cancelled Customers', value: 300 },
-  { name: 'Pending Customers', value: 300 }
+  { name: 'New Technicians', value: 400 },
+  { name: 'Best Performance', value: 300 },
+  { name: 'Poor Performance', value: 300 }
 ];
 const COLORS = ['#B5B5B6', '#7A64C6', '#D57C09'];
 
-export default class CustomerCtMonth extends PureComponent {
+export default class AdminCustomerchart extends PureComponent {
   static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
 
   render() {

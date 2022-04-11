@@ -1,54 +1,36 @@
-import React from "react";
-import { PieChart, Pie, Sector, Cell,Legend, ResponsiveContainer } from 'recharts';
-
+import React , { PureComponent } from "react";
+import { PieChart, Pie, Sector, Cell, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-    { name: 'Group A', value: 400 },
-    { name: 'Group B', value: 200 },
-    { name: 'Group C', value: 300 },
-  ];
-  
-  const COLORS = ['#b5b5b6', '#7a64c6', '#d57c09'];
-  
-  const RADIAN = Math.PI / 180;
-  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-    const x = cx + radius * Math.cos(-midAngle * RADIAN);
-    const y = cy + radius * Math.sin(-midAngle * RADIAN);
-  
-    return (
-      <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-        {`${(percent * 100).toFixed(0)}%`}
-      </text>
-    );
-  };
+  { name: 'Competed Customers', value: 400 },
+  { name: 'Cancelled Customers', value: 400 },
+  { name: 'Pending Customers', value: 200 }
+];
+const COLORS = ['#B5B5B6', '#7A64C6', '#D57C09'];
 
-  function CustomerCtweek(){
-    
-    return(
-        <>
-       
-      
-        <PieChart width={400} height={250}>
-          <Pie
-            data={data}
-            cx="50%"
-            cy="50%"
-            labelLine={false}
-            label={renderCustomizedLabel}
-            outerRadius={80}
-            fill="#8884d8"
-            dataKey="value"
-          >
-            {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-            ))}
-          </Pie>
-          <Legend/>
-        </PieChart>
-        
-        </>
-    )
+export default class CustomerCtweek extends PureComponent {
+  static demoUrl = 'https://codesandbox.io/s/pie-chart-with-padding-angle-7ux0o';
+
+  render() {
+    return (
+      <PieChart width={350} height={450} onMouseEnter={this.onPieEnter}>
+        <Pie
+          data={data}
+          cx={80}
+          cy={150}
+          innerRadius={50}
+          outerRadius={100}
+          fill="#8884d8"
+          paddingAngle={2}
+          dataKey="value"
+        >
+          {data.map((entry, index) => (
+            <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+          ))}
+        </Pie>
+        <Legend/>
+      </PieChart>
+    );
+  }
 }
-export default CustomerCtweek;
 

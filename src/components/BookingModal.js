@@ -156,8 +156,8 @@ class BookingModal extends React.Component {
 					    <div className="inside-comon-div">
                               <h4>Personal Information</h4>
 							  <hr/>
-							<div className="ad-fm mt-4">
-							    <div className="row row-cols-1 row-cols-lg-2 gx-lg-5 gy-lg-5">
+							<div className="ad-fm mt-0">
+							    <div className="row row-cols-1 row-cols-lg-2 gx-lg-5 gy-lg-4">
 								   <div className="col">
 										<div className="from-group mb-4 mb-lg-0">
 											<label> First Name</label>

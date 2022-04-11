@@ -4,7 +4,7 @@ import logobodyimg from "../src/images/logo-img.svg";
 import logologin from "../src/images/logo-login.png";
 import iconeye from "../src/images/fm-eye.svg";
 
-function Login(){
+function AdminLogin(){
 
     return(
          <>
@@ -49,7 +49,7 @@ function Login(){
                                      <NavLink to="/forget" className="forget-btn"> Forgot Password? </NavLink>
                                  </div>
                                  <div className="from-group">
-                                     <NavLink to="/dashbord" className="sign-btn">
+                                     <NavLink to="/admindashbord" className="sign-btn">
                                      <button type="submit"> Sign In </button>  
                                      </NavLink>
                                  </div>
@@ -66,4 +66,4 @@ function Login(){
          </>
     );
 }
-export default Login;
+export default AdminLogin;

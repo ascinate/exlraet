@@ -24,12 +24,29 @@ class CloneFild extends React.Component {
               $(this).attr('name', fieldname + count);
               count++;
             });
+
+
       
           });
         });
       $(document).on('click', '.remove-field', function(e) {
         $(this).parent('.remove').remove();
         e.preventDefault();
+      });
+
+      $(document).ready(function(){
+
+        
+        $("#dlet-btn").click(function(){
+            $("#show-as-clone").hide();
+          });
+
+        $(".adbenf-btn").click(function(){
+            $("#show-as-clone").show();
+          });
+
+          
+
       });
     }
 
@@ -51,18 +68,11 @@ class CloneFild extends React.Component {
                                 <option value="3">Three</option>
                             </select>
                         </div>
-                        <div className="col-lg-4">
-                            <label className="mt-4 mt-md-0"> Type of Vial</label>
-                            <select class="form-select" aria-label="Default select example">
-                                <option selected>-- Select--</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
-                        </div>
+                        
                     </div>
 
                     <div className="cunt-div mt-4">
+                        <h4> Type of Vial </h4>
                         <div className="row row-cols-1 row-cols-sm-3">
 
 
@@ -268,7 +278,7 @@ class CloneFild extends React.Component {
                 </div>
           </div>
 
-          <div className="row add-move customer_records align-items-center mt-3">
+          <div id="show-as-clone" className="row add-move customer_records align-items-center mt-3">
              <div className="col-lg-3">
                 <div className="form-group">
                    <label> Name </label>
@@ -299,7 +309,7 @@ class CloneFild extends React.Component {
                 </div>
              </div>
             <div className="col-1 sp-rm-div">
-                 <a id="#" className="rvm-btn"> <img src="img/dl-icon.svg" al="bt"/> </a>
+                 <a id="dlet-btn" className="rvm-btn"> <img src="img/dl-icon.svg" al="bt"/> </a>
             </div>
           </div>
           <div className="customer_records_dynamic mt-4"></div>

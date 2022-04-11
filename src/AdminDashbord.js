@@ -4,8 +4,8 @@ import BookingCtWeek from "./components/BookingCtWeek";
 import BookingCtMonth from "./components/BookingCtMonth";
 import RevieCtWeek from "./components/RevieCtWeek";
 import RevieCtMonth from "./components/RevieCtMonth";
-import CustomerCtweek from "./components/CustomerCtweek";
-import CustomerCtMonth from "./components/CustomerCtMonth";
+import TotalCustomerGraph from "./components/TotalCustomerGraphMonth";
+import AdminCustomerchart from "./components/AdminCustomerchart";
 import dsicn from "../src/images/ds-icon.png";
 import clicn from "../src/images/uil_calender.svg";
 import coloricon from "../src/images/cl-icon-color.svg";
@@ -31,11 +31,14 @@ import AdminSidebar from "./AdminSidebar";
 import TopMenu from"./components/TopMenu";
 import FilerDashboard from "./components/FilerDashboard";
 import DashbordCalender from "./components/DashbordCalender";
+import TotalCustomerGraphWeek from "./components/TotalCustomerGraphWeek";
+import TotalCustomerGraphDay from "./components/TotalCustomerGraphDay";
+import AdminReveiwNewWeek from "./components/AdminReveiwNewWeek";
 import { FaBars } from "react-icons/fa";
 import $ from "jquery";
 
 
-class Dashbord extends React.Component {
+class AdminDashbord extends React.Component {
    componentWillMount(){
 
       $(document).ready(function(){
@@ -79,7 +82,7 @@ class Dashbord extends React.Component {
                          
                          <a data-bs-toggle="modal" data-bs-target="#caldenderModal" className="my-4 btn ds-calender my-md-0"> <span> <img src={clicn} alt="cl"/> </span> February 2022 </a>
                       
-                         <p className="mb-0 mt-md-2 mt-lg-0"> <FaBell/> You have 2 new messages and 15 new tasks</p>
+                         <p className="mb-0 mt-md-2 mt-lg-0"> <FaBell/>  Admin You have 2 new messages and 15 new tasks</p>
                          
                       
                       </div>
@@ -122,8 +125,8 @@ class Dashbord extends React.Component {
                                </div>
                                <div className="list-count">
                                   <ul className="list-unstyled m-0">
-                                  <li>Pending: 10 </li>
-                                  <li>Completed: 05</li>
+                                  <li>New: 10 </li>
+                                  <li>Existing: 07</li>
                                   </ul>
                                </div>
                          </div>
@@ -146,8 +149,9 @@ class Dashbord extends React.Component {
                                </div>
                                <div className="list-count">
                                   <ul className="list-unstyled m-0">
-                                  <li>Pending: 15 </li>
-                                  <li>Completed: 10</li>
+                                  <li>Busy: 05 </li>
+                                  <li>Available: 02</li>
+                                  <li>Inactive: 05</li>
                                   </ul>
                                </div>
                          </div>
@@ -160,8 +164,12 @@ class Dashbord extends React.Component {
                       <div className="comon-chart-globe p-3 mb-4 mb-lg-0">
                             
                             <div className="d-flex justify-content-between align-items-center">
-                               <h2 className="cm-heading mt-3 mt-md-0 mb-md-0"> Customers </h2>
+                               <h2 className="cm-heading mt-3 mt-md-0 mb-md-0"> Total Customers </h2>
                                <ul class="nav nav-pills mb-0" id="pills-tab" role="tablist">
+                                     <li class="nav-item" role="presentation">
+                                     <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#customerday" type="button" role="tab" aria-controls="pills-home" 
+                                     aria-selected="true">Day</button>
+                                     </li>
                                      <li class="nav-item" role="presentation">
                                      <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#customerweek" type="button" role="tab" aria-controls="pills-home" 
                                      aria-selected="true">Week</button>
@@ -175,15 +183,20 @@ class Dashbord extends React.Component {
                             </div>
 
                             <div class="tab-content mt-3" id="pills-tabContent">
+                              <div class="tab-pane fade " id="customerday" role="tabpanel" aria-labelledby="pills-home-tab">
+                                 <div className="custome-div1">
+                                    <TotalCustomerGraphDay/>
+                                 </div>
+                               </div>
                                <div class="tab-pane fade " id="customerweek" role="tabpanel" aria-labelledby="pills-home-tab">
                                  <div className="custome-div1">
-                                   <CustomerCtweek/>
+                                     <TotalCustomerGraphWeek/>
                                  </div>
                                </div>
                                <div class="tab-pane fade show active" id="customermonth" role="tabpanel" aria-labelledby="pills-profile-tab">
                                   <div className="custome-div1">  
                                   
-                                       <CustomerCtMonth/>
+                                       <TotalCustomerGraph/>
                                   </div> 
                                
                                </div>
@@ -197,43 +210,12 @@ class Dashbord extends React.Component {
                    <div className="col-lg-5">
                       <div className="revenu-div p-3 mb-4 mb-lg-0">
                             <div className="d-flex justify-content-between align-items-center">
-                               <h2 className="cm-heading mt-3 mt-md-0 mb-md-0"> Total Revenue </h2>
-                               <ul class="nav nav-pills mb-0" id="pills-tab" role="tablist">
-                                  <li class="nav-item" role="presentation">
-                                  <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#revenueweek" type="button" role="tab" aria-controls="pills-home" 
-                                  aria-selected="true">Week</button>
-                                  </li>
-                                  <li class="nav-item" role="presentation">
-                                  <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#revenuemonth"
-                                        type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Month</button>
-                                  </li>
+                               <h2 className="cm-heading mt-3 mt-md-0 mb-md-0"> Technicians Performance </h2>
                                
-                               </ul>
                             </div>
                             
-                            <div class="tab-content mt-3" id="pills-tabContent">
-                               <div class="tab-pane fade " id="revenueweek" role="tabpanel" aria-labelledby="pills-home-tab">
-                                  
-                                  <div className="number-rev d-flex align-items-center justify-content-center text-center">
-                                        <span className="dl-icon">
-                                        <FaRupeeSign/>
-                                        </span>
-                                        <h3>24,000 </h3>
-                                  </div>
-                                  <RevieCtMonth/>
-                               </div>
-                               <div class="tab-pane fade show active" id="revenuemonth" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                  
-                                  <div className="number-rev d-flex align-items-center justify-content-center text-center">
-                                     <span className="dl-icon">
-                                        <FaRupeeSign/>
-                                     </span>
-                                     <h3>25,000 </h3>
-                                  </div>
-                                  <RevieCtWeek/>
-                               
-                               </div>
-                               
+                            <div className="ts-performance">
+                               <AdminCustomerchart/>
                             </div>
 
                       </div>
@@ -243,7 +225,7 @@ class Dashbord extends React.Component {
                       <div className="total-content-div p-3">
                             <div className="d-sm-flex justify-content-between align-items-center">
                                   <div className="d-flex align-items-center">
-                                        <h2 className="cm-heading mb-0 mb-md-0"> Total Bookings
+                                        <h2 className="cm-heading mb-0 mb-md-0"> Total Revenue
                                         </h2>
                                         <div class="dropdown ms-3">
                                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -288,7 +270,14 @@ class Dashbord extends React.Component {
                                         </div>
                                         <div class="tab-pane fade show active" id="revenuenewmonth" role="tabpanel" aria-labelledby="pills-profile-tab">
                                            
-                                           <NewRevinew/>
+                                            <div className="row">
+                                               <div className="col-lg-7"></div>
+                                                <div className="col-lg-5 dash-admin-reviw">
+                                                  
+                                                    <AdminReveiwNewWeek/>
+                                                  
+                                                </div>
+                                            </div>
                                         
                                         </div>
                                         
@@ -715,4 +704,4 @@ class Dashbord extends React.Component {
    }
  }
 
-export default Dashbord;
+export default AdminDashbord;
