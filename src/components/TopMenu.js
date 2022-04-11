@@ -8,12 +8,8 @@ import { FaBars } from "react-icons/fa";
 function TopMenu(){
     return(
         <>
-            <div className="d-none d-md-block">
-                <div className="top-bar-menu shadow float-start w-100 ">
-                        <a id="togle-icon" className="tog-btn">
-                        <FaBars/>
-                        </a>
-
+            <div className="d-none d-lg-block">
+                
                         <div className="right-menu-sec">
                         <ul className="list-unstyled m-0 d-flex">
                             <li>
@@ -79,7 +75,7 @@ function TopMenu(){
                             
                          </ul>
                         </div>
-                </div>
+                
             </div>
         </>
     );

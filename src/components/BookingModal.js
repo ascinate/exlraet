@@ -122,6 +122,7 @@ class BookingModal extends React.Component {
       return (
           <>
             <div className="form-wizard">
+			
                 <form action="" method="post" role="form">
                    <div className="form-wizard-header">
            
@@ -156,23 +157,23 @@ class BookingModal extends React.Component {
                               <h4>Personal Information</h4>
 							  <hr/>
 							<div className="ad-fm mt-4">
-							    <div className="row row-cols-1 row-cols-2 gx-lg-5 gy-lg-5">
+							    <div className="row row-cols-1 row-cols-lg-2 gx-lg-5 gy-lg-5">
 								   <div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> First Name</label>
 											<input type="text" className="form-control wizard-required" placeholder="Ex. Amit" />
 											<div className="wizard-form-error"></div>
 										</div>
 								   </div>
 								   <div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> Email Id</label>
 											<input type="text" className="form-control wizard-required" placeholder="Ex. admin@gmail.com"/>
 											<div className="wizard-form-error"></div>
 										</div>
 								   </div>
 								   <div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> Phone Number</label>
 											<input type="text" className="form-control wizard-required" placeholder="Ex. 111-111-1111"/>
 											<div className="wizard-form-error"></div>
@@ -180,7 +181,7 @@ class BookingModal extends React.Component {
 								   </div>
 
 								   <div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> Date of Birth</label>
 											<DatePickerSection/>
 										</div>
@@ -188,7 +189,7 @@ class BookingModal extends React.Component {
 
 
 								   <div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> Gender</label>
 											
 											<select class="form-select" aria-label="Default select example">
@@ -201,7 +202,7 @@ class BookingModal extends React.Component {
 								   </div>
 
 								   <div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> Date of Test</label>
 											<DatePickerSec1/>
 										</div>
@@ -226,9 +227,9 @@ class BookingModal extends React.Component {
 							<h4>Address Information</h4>
 							<hr/>  
 							<div className="ad-fm mt-4">
-							   <div className="row row-cols-1 row-cols-2 gx-lg-5 gy-lg-5">
+							   <div className="row row-cols-1 row-cols-lg-2 gx-lg-5 gy-lg-5">
 							        <div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> Current Address</label>
 											<input type="text" className="form-control wizard-required" placeholder="Ex. Amit" />
 											<div className="wizard-form-error"></div>
@@ -236,7 +237,7 @@ class BookingModal extends React.Component {
 									</div>
 
 									<div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> State</label>
 											  <select class="form-select" aria-label="Default select example">
 												<option selected></option>
@@ -248,7 +249,7 @@ class BookingModal extends React.Component {
 									</div>
 
 									<div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> City </label>
 											<input type="text" className="form-control wizard-required" placeholder="Ex. Amit" />
 											<div className="wizard-form-error"></div>
@@ -256,7 +257,7 @@ class BookingModal extends React.Component {
 									</div>
 
 									<div className="col">
-										<div className="from-group">
+										<div className="from-group mb-4 mb-lg-0">
 											<label> Zipcode </label>
 											<input type="text" className="form-control wizard-required" placeholder="Ex. Amit" />
 											<div className="wizard-form-error"></div>

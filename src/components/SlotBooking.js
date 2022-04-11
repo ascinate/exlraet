@@ -102,7 +102,7 @@ class SlotBooking extends React.Component {
           <>
            <div className="row plans">
 							       
-				<ul className="d-flex list-unstyled justify-content-between">
+				<ul className="d-md-flex list-unstyled justify-content-center justify-content-lg-between">
                   <li>
                      <a id="day1" className="cm-slots">
                         <span className="iconradio">
